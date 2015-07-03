@@ -15,9 +15,7 @@
 #include <ComboConstants.au3>
 #include <GuiListView.au3>
 
-
 #NoTrayIcon
-
 Opt("TrayAutoPause",0)
 AutoItSetOption("WinTitleMatchMode", 2)     ;1=start, 2=subStr, 3=exact, 4=advanced, -1 to -4=Nocase
 Opt("GUIOnEventMode", 1)  ; Change to OnEvent mode
@@ -112,14 +110,6 @@ Func EventHandler()
 			MoveDown()
 		Case $btn_apply
 			apply_order()
-		#cs
-		Case $btn_disable
-			DisableHost()
-		Case $btn_delete
-			DeleteHost()
-		Case $btn_advanced
-			EditIniFile()
-		#ce
 	EndSwitch
 EndFunc
 
